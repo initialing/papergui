@@ -26,8 +26,15 @@ class ppui():
         root["menu"]=menu
 
     def ui_content1(self,root,parents):
-        cont1_btn1=Button(root,text="选择图片",font=0.5)
-        cont1_btn1.place(relx=0.02,rely=0.02)
+        cont1_btn1=Button(root,text="选择图片",font=("Microsoft YaHei", 7),width=10,height=1)
+        cont1_label=Label(root,bg='white',width=45,height=18)
+        cont1_label1=Label(root,text="圈高1：")
+        self.search_key=StringVar()
+        cont1_entry1=Entry(root,textvariable=self.search_key,bd=1 ,font=("Time New Rome", 11),width=6)
+        cont1_btn1.place(relx=0.02,rely=0.05)
+        cont1_label.place(relx=0.02,rely=0.14)
+        cont1_label1.place(relx=0.6,rely=0.2)
+        cont1_entry1.place(relx=0.68,rely=0.205)
         parents.add(root,text="圈高设置")
 
     def ui_content2(self,root,parents):
