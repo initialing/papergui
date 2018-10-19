@@ -52,7 +52,7 @@ class ppui():
         cont1_label8=Label(root,text="圈高种类：")
         cont1_spinbox1=Spinbox(root,value=(1,2,3,4,5),increment=10,width=3)
         cont1_btn2=Button(root,text="开始",font=("Time New Rome", 11),width=6,height=1)
-        cont1_btn3=Button(root,text="停止",font=("Time New Rome", 11),width=6,height=1)
+        cont1_btn3=Button(root,text="停止",font=("Time New Rome", 11),width=6,height=1,state="disabled")
         cont1_btn1.place(relx=0.02,rely=0.05)
         cont1_label.place(relx=0.02,rely=0.14)
         cont1_label1.place(relx=0.6,rely=0.2)
