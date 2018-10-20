@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter.messagebox import *
 from tkinter.font import Font
+import tkinter.messagebox
 
 class ppui():
     def __init__(self):
@@ -51,7 +52,7 @@ class ppui():
         cont1_entry7=Entry(root,textvariable=self.search_key7,bd=1 ,font=("Time New Rome", 11),width=6)
         cont1_label8=Label(root,text="圈高种类：")
         cont1_spinbox1=Spinbox(root,value=(1,2,3,4,5),increment=10,width=3)
-        cont1_btn2=Button(root,text="开始",font=("Time New Rome", 11),width=6,height=1)
+        cont1_btn2=Button(root,text="开始",command=self.startfunc1,font=("Time New Rome", 11),width=6,height=1)
         cont1_btn3=Button(root,text="停止",font=("Time New Rome", 11),width=6,height=1,state="disabled")
         cont1_btn1.place(relx=0.02,rely=0.05)
         cont1_label.place(relx=0.02,rely=0.14)
@@ -79,6 +80,12 @@ class ppui():
         l2=Label(root,text='label2')
         l2.pack(fill=BOTH)
         parents.add(root,text="tab2")
+
+    def startfunc1(self):
+        #tkinter.messagebox.showwarning("警告","圈高设置错误或数据设置不完整")
+        #tkinter.messagebox.showwarning("警告","圈高数目设置少于圈高种类设置")
+        # tkinter.messagebox.askyesno("提示","圈高种类为3，地毯宽度与设计图不匹配\n是否继续？")
+        tkinter.messagebox.askyesno("提示","圈高种类为3\n是否继续？")
 
 if __name__ == '__main__':
     ppui()
